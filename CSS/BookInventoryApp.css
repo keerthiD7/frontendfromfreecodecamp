@@ -1,0 +1,78 @@
+/* Row background gradients */
+tr[class="read"] {
+  background-image: linear-gradient(to right, #d4edda, #a8e6b0);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to right, #fff3cd, #ffe08a);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(to right, #cce5ff, #99ccff);
+}
+
+/* Status badge styles */
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid #e0a800;
+  background-image: linear-gradient(to right, #fff3cd, #ffe08a);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid #28a745;
+  background-image: linear-gradient(to right, #d4edda, #a8e6b0);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid #0d6efd;
+  background-image: linear-gradient(to right, #cce5ff, #99ccff);
+}
+
+/* Status + Rate container sizing */
+span[class="status"],
+span[class^="rate"] {
+  height: 20px;
+  width: 20px;
+  padding: 4px;
+  display: inline-block;
+}
+
+/* Base star style */
+span[class^="rate"] span {
+  border: 1px solid #999;
+  border-radius: 50%;
+  margin: 2px;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  display: inline-block;
+}
+
+/* ⭐ Rating = one */
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(gold, orange);
+}
+
+/* ⭐⭐ Rating = two */
+span[class~="two"] span:nth-child(-n+2) {
+  background-image: linear-gradient(gold, orange);
+}
+
+/* ⭐⭐⭐ Rating = three */
+span[class~="three"] span {
+  background-image: linear-gradient(gold, orange);
+}
+
+
+span{
+  display:inline-block;
+}
+
+span[class^="rate"] > span {
+  border: 1px solid #999;
+  border-radius: 50%;
+  margin: 2px;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  display: inline-block;
+}
